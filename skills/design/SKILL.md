@@ -11,19 +11,41 @@ Turn verified company context into a distinctive, coherent, implementable websit
 
 ## Design Library
 
-Use `telano-gif/Design_Library` as read-only design intelligence. Its `DESIGN.md` is the operating manual and must be consulted before library research.
+Use `telano-gif/Design_Library` as read-only design intelligence.
 
-Search selectively, in this order as needed:
+**Access protocol:**
+1. Read `Design_Library/DESIGN.md` first.
+2. Inspect the repository tree to identify relevant paths.
+3. Select files by directory/filename before opening file contents.
+4. Fetch only the smallest relevant set of files.
+5. Do not rely on GitHub code search; it may not index every library file.
+6. Never read the entire library for a project.
+
+### Actual library structure
+
+- `DESIGN.md` — library operating manual
+- `00_DESIGN_PRINCIPLES.md` — universal design principles
+- `01_LAYOUTS/` — page/layout patterns
+- `02_COMPONENTS/` — reusable UI patterns
+- `03_VISUAL_SYSTEMS/` — typography, grid, spacing, colour and imagery systems
+- `04_MOTION/` — motion patterns
+- `05_INTERACTION/` — interaction patterns
+- `06_NICHE_PATTERNS/` — industry/niche patterns
+- `07_REFERENCE_SITES/` — actionable page, layout and component patterns extracted from real sites
+- `08_SOURCE_WORKFLOW.md` — external reference/source workflow
+- `09_DESIGN_RECIPES/` — compositional recipes for common design objectives
+- `10_REAL_DESIGN_SYSTEMS/` — compact design-language analyses of real websites
+
+Use the layers selectively, generally in this order as needed:
 1. niche patterns
 2. page layouts
 3. components
 4. visual systems
 5. motion
 6. interaction
-7. source/reference analyses
-8. design recipes
-
-Inspect filenames/search results first; open only relevant files. Do not read the entire library. Prefer 3–6 strong compatible patterns over a large collection of effects.
+7. `07_REFERENCE_SITES/` when a concrete page/layout/component reference is useful
+8. `10_REAL_DESIGN_SYSTEMS/` when a real site's broader design language is useful
+9. design recipes for synthesis
 
 Pattern selection must respond to:
 - business objective
@@ -41,7 +63,7 @@ References are evidence, not templates. Extract principles such as composition, 
 
 1. Establish audience, business goal, niche, page set, content density, brand character and primary conversion action from Intake/Research.
 2. Identify the visual problem the site must solve.
-3. Search the Design Library for the smallest relevant set of patterns.
+3. Read `Design_Library/DESIGN.md`, inspect the tree, then fetch only the smallest relevant set of library files.
 4. Select compatible patterns and resolve conflicts before implementation.
 5. Define an original visual system and page architecture.
 6. Define imagery roles and art direction; image sourcing is handled by the imagery stage when available.
@@ -50,7 +72,12 @@ References are evidence, not templates. Extract principles such as composition, 
 9. Produce the compact implementation specification.
 
 ## Produce
-`02_design/DESIGN_SPEC.md` containing:
+
+Write the canonical project artifact at the **repository root**:
+
+`DESIGN_SPEC.md`
+
+It must contain:
 - design concept
 - audience/business/UX rationale
 - visual hierarchy
